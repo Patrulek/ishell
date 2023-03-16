@@ -19,8 +19,8 @@ import (
 	"unicode/utf8"
 
 	"github.com/abiosoft/readline"
+	shlex "github.com/anmitsu/go-shlex"
 	"github.com/fatih/color"
-	shlex "github.com/flynn-archive/go-shlex"
 )
 
 const (
@@ -312,7 +312,7 @@ func (s *Shell) read() ([]string, error) {
 
 	if heredoc {
 		s := strings.SplitN(lines, "<<", 2)
-		args, err1 := shlex.Split(s[0])
+		args, err1 := shlex.Split(s[0], false)
 
 		arg := strings.TrimSuffix(strings.SplitN(s[1], "\n", 2)[1], eof)
 		args = append(args, arg)
@@ -324,7 +324,7 @@ func (s *Shell) read() ([]string, error) {
 
 	lines = strings.Replace(lines, "\\\n", " \n", -1)
 
-	args, err1 := shlex.Split(lines)
+	args, err1 := shlex.Split(lines, false)
 	if err1 != nil {
 		return args, err1
 	}

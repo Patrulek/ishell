@@ -3,7 +3,7 @@ package ishell
 import (
 	"strings"
 
-	"github.com/flynn-archive/go-shlex"
+	"github.com/anmitsu/go-shlex"
 )
 
 type iCompleter struct {
@@ -16,7 +16,7 @@ func (ic iCompleter) Do(line []rune, pos int) (newLine [][]rune, length int) {
 		return nil, len(line)
 	}
 	var words []string
-	if w, err := shlex.Split(string(line)); err == nil {
+	if w, err := shlex.Split(string(line), false); err == nil {
 		words = w
 	} else {
 		// fall back

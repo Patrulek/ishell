@@ -2,14 +2,14 @@
 
 ishell is an interactive shell library for creating interactive cli applications.
 
-[![Go Reference](https://godocs.io/github.com/abiosoft/ishell/v2?status.svg)](https://godocs.io/github.com/abiosoft/ishell/v2)
+[![Go Reference](https://godocs.io/github.com/Patrulek/ishell/v2?status.svg)](https://godocs.io/github.com/Patrulek/ishell/v2)
 [![Go Report Card](https://goreportcard.com/badge/github.com/abiosoft/ishell)](https://goreportcard.com/report/github.com/abiosoft/ishell)
 
 ## Usage
 
 ```go
 import "strings"
-import "github.com/abiosoft/ishell/v2"
+import "github.com/Patrulek/ishell/v2"
 
 func main(){
     // create new shell.
@@ -301,7 +301,7 @@ This line is yellow
 
 ### Example
 
-Available [here](https://github.com/abiosoft/ishell/blob/master/example/main.go).
+Available [here](https://github.com/Patrulek/ishell/blob/master/example/main.go).
 
 ```sh
 go run example/main.go
@@ -313,30 +313,6 @@ go run example/main.go
 - [x] OSX
 - [x] Windows [Not tested but should work]
 
-## Note
-
-ishell is in active development and can still change significantly.
-
-## Roadmap (in no particular order)
-
-- [x] Multiline inputs
-- [x] Command history
-- [x] Customizable tab completion
-- [x] Handle ^C interrupts
-- [x] Subcommands and help texts
-- [x] Scrollable paged output
-- [x] Progress bar
-- [x] Multiple choice prompt
-- [x] Checklist prompt
-- [x] Support for command aliases
-- [ ] Multiple line progress bars
-- [ ] Testing, testing, testing
-
-## Contribution
-
-1. Create an issue to discuss it.
-2. Send in Pull Request.
-
 ## License
 
 MIT
@@ -345,12 +321,5 @@ MIT
 
 | Library                                                                        | Use                                    |
 | ------------------------------------------------------------------------------ | -------------------------------------- |
-| [github.com/flynn-archive/go-shlex](https://github.com/flynn-archive/go-shlex) | splitting input into command and args. |
+| [github.com/anmitsu/go-shlex](https://github.com/anmitsu/go-shlex)             | splitting input into command and args. |
 | [github.com/chzyer/readline](https://github.com/chzyer/readline)               | readline capabilities.                 |
-
-## Donate
-
-```
-bitcoin: 1GTHYEDiy2C7RzXn5nY4wVRaEN2GvLjwZN
-paypal: a@abiosoft.com
-```
