@@ -1,4 +1,4 @@
-module github.com/Patrulek/ishell/v2
+module github.com/patrulek/ishell/v2
 
 go 1.20
 
